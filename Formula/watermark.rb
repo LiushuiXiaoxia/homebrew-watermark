@@ -2,11 +2,10 @@ class Watermark < Formula
   desc "add water mark to image"
   homepage "https://github.com/LiushuiXiaoxia/WaterMark"
   url "https://github.com/LiushuiXiaoxia/WaterMark/blob/master/deploy/watermark-0.1.tar"
-  sha256 "bf7c6c50d159501d07788fb02b08f7cea88e6ff9e5e411340a82357b28394537"
+  sha256 "60fe423dd0464ef3017b2d7fa1f17226a3d3ad131b81f2978b9c49e1a694d640"
 
   def install
     libexec.install Dir["*"]
-    bin.install_symlink "#{libexec}/watermark.sh" => "watermark"
 
     cmd = "echo '#!/usr/bin/env sh' > #{libexec}/watermark.sh"
     system cmd
@@ -14,6 +13,9 @@ class Watermark < Formula
     text = "python #{libexec}/watermark.py $@"
     cmd = "echo '#{text}' >> #{libexec}/watermark.sh"
     system cmd
+
+    cmd = 'chmod'
+    bin.install_symlink "#{libexec}/watermark.sh" => "watermark"
   end
 
   test do
