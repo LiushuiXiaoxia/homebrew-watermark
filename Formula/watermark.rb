@@ -14,7 +14,6 @@ class Watermark < Formula
     cmd = "echo '#{text}' >> #{libexec}/watermark.sh"
     system cmd
 
-    cmd = 'chmod'
     bin.install_symlink "#{libexec}/watermark.sh" => "watermark"
   end
 
