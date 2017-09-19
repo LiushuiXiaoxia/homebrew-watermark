@@ -2,7 +2,7 @@ class Watermark < Formula
   desc "add water mark to image"
   homepage "https://github.com/LiushuiXiaoxia/WaterMark"
   url "https://github.com/LiushuiXiaoxia/WaterMark/blob/master/deploy/watermark-0.1.tar"
-  sha256 "44726143af70bfeae4dc52d3c3a0716ccc8c9cf15f62ebf9b8c0f3e0c1c7ec4b"
+  sha256 "1c890a6500c9dd55a3b133ba08bc732e2a02b446cc2cfe73fa63ce5bd0f5442d"
 
   def install
     libexec.install Dir["*"]
